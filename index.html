@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="vendor/react/react-with-addons.js"></script>
+        <script>
+            var require = {
+                baseUrl: 'build/'
+            };
+        </script>
+        <script src="vendor/requirejs/require.js"></script>
+    </head>
+    <body>
+        <div id="product-table"></div>
+        <script>
+            require(
+                ['components/FilterableProductTable'],
+                function (FilterableProductTable) {
+
+                    var PRODUCTS = [
+                      {category: 'Sporting Goods', price: '$49.99', stocked: true, name: 'Football'},
+                      {category: 'Sporting Goods', price: '$9.99', stocked: true, name: 'Baseball'},
+                      {category: 'Sporting Goods', price: '$29.99', stocked: false, name: 'Basketball'},
+                      {category: 'Electronics', price: '$99.99', stocked: true, name: 'iPod Touch'},
+                      {category: 'Electronics', price: '$399.99', stocked: false, name: 'iPhone 5'},
+                      {category: 'Electronics', price: '$199.99', stocked: true, name: 'Nexus 7'}
+                    ];
+
+                    React.renderComponent(
+                        FilterableProductTable({
+                            products: PRODUCTS
+                        }),
+                        document.getElementById('product-table')
+                    );
+                }
+            );
+        </script>
+    </body>
+</html>

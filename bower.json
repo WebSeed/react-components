@@ -1,0 +1,23 @@
+{
+  "name": "react-components",
+  "version": "0.0.0",
+  "homepage": "https://github.com/WebSeed/react-components",
+  "authors": [
+    "Will Bamford <w.bamford@gmail.com>"
+  ],
+  "moduleType": [
+    "amd"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "react": "~0.10.0",
+    "requirejs": "~2.1.14"
+  }
+}
